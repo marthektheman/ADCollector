@@ -34,15 +34,6 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("LDAP://DCPWADS004")]
-        public string ROOT {
-            get {
-                return ((string)(this["ROOT"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2.0.0.2")]
         public string version {
             get {
@@ -56,24 +47,6 @@ namespace ADCollector.Properties {
         public string Database {
             get {
                 return ((string)(this["Database"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("shbascripts")]
-        public string Username {
-            get {
-                return ((string)(this["Username"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("$cr1pt$upp0rt")]
-        public string Pwd {
-            get {
-                return ((string)(this["Pwd"]));
             }
         }
         
@@ -115,15 +88,6 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Utilization")]
-        public string UtilizationDatabase {
-            get {
-                return ((string)(this["UtilizationDatabase"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("shbascripts")]
         public string UtilizationUsername {
             get {
@@ -146,15 +110,6 @@ namespace ADCollector.Properties {
         public string DatabaseInstance {
             get {
                 return ((string)(this["DatabaseInstance"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DCPWDBS447\\SHIS")]
-        public string UtilizationDatabaseInstance {
-            get {
-                return ((string)(this["UtilizationDatabaseInstance"]));
             }
         }
         
@@ -187,7 +142,7 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DOMAIN\\\\NetBackup")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DOMAIN\\SysAdminAccount")]
         public string SysAdminAccount {
             get {
                 return ((string)(this["SysAdminAccount"]));
@@ -205,7 +160,7 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DL-PCRDatabaseAlerts@domain")]
+        [global::System.Configuration.DefaultSettingValueAttribute("fromemail@domain")]
         public string fromemail {
             get {
                 return ((string)(this["fromemail"]));
@@ -217,7 +172,7 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DL-PCRDatabaseAlerts@domain")]
+        [global::System.Configuration.DefaultSettingValueAttribute("tomemail@domain")]
         public string alertemail {
             get {
                 return ((string)(this["alertemail"]));
@@ -229,13 +184,40 @@ namespace ADCollector.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SQL_Instance")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<SQL_Instance>")]
         public string Instance {
             get {
                 return ((string)(this["Instance"]));
             }
             set {
                 this["Instance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<Run As Username>")]
+        public string Username {
+            get {
+                return ((string)(this["Username"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<Run As Password>")]
+        public string Pwd {
+            get {
+                return ((string)(this["Pwd"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LDAP://DCPWADS004")]
+        public string ROOT {
+            get {
+                return ((string)(this["ROOT"]));
             }
         }
     }

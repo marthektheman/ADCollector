@@ -17,15 +17,6 @@ namespace ADCollector
        //     string connectionstring = Properties.Settings.Default.ADInventoryTestConnectionString;
        //     string connectionstring = Properties.Settings.Default.ADInventoryConnectionString;
             return connectionstring;
-        }  
-        internal String GetUtilizationConnectionString()
-        {
-            string connectionstring = "Data Source=" + Properties.Settings.Default.UtilizationDatabaseInstance +
-              ";Initial Catalog=" + Properties.Settings.Default.UtilizationDatabase +
-              ";User ID=" + Properties.Settings.Default.UtilizationUsername +
-              ";Password=" + Properties.Settings.Default.UtilizationPassword +
-              ";Persist Security Info=True;Connection Timeout=3600;Connection Lifetime=0;Min Pool Size=0;Max Pool Size=10000;Pooling=true";
-            return connectionstring;
-        }      
+        }
     }
 }

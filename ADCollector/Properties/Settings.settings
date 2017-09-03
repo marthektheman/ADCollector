@@ -5,20 +5,11 @@
     <Setting Name="ApplicationName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADCollector.exe</Value>
     </Setting>
-    <Setting Name="ROOT" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">LDAP://DCPWADS004</Value>
-    </Setting>
     <Setting Name="version" Type="System.String" Scope="Application">
       <Value Profile="(Default)">2.0.0.2</Value>
     </Setting>
     <Setting Name="Database" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryProd</Value>
-    </Setting>
-    <Setting Name="Username" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">shbascripts</Value>
-    </Setting>
-    <Setting Name="Pwd" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">$cr1pt$upp0rt</Value>
     </Setting>
     <Setting Name="TestDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryTest</Value>
@@ -32,9 +23,6 @@
     <Setting Name="WorkstationDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryWin7</Value>
     </Setting>
-    <Setting Name="UtilizationDatabase" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Utilization</Value>
-    </Setting>
     <Setting Name="UtilizationUsername" Type="System.String" Scope="Application">
       <Value Profile="(Default)">shbascripts</Value>
     </Setting>
@@ -42,9 +30,6 @@
       <Value Profile="(Default)">$cr1pt$upp0rt</Value>
     </Setting>
     <Setting Name="DatabaseInstance" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">DCPWDBS447\SHIS</Value>
-    </Setting>
-    <Setting Name="UtilizationDatabaseInstance" Type="System.String" Scope="Application">
       <Value Profile="(Default)">DCPWDBS447\SHIS</Value>
     </Setting>
     <Setting Name="DatabaseTest" Type="System.String" Scope="Application">
@@ -57,19 +42,28 @@
       <Value Profile="(Default)">ccemail@domain.org</Value>
     </Setting>
     <Setting Name="SysAdminAccount" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">DOMAIN\\NetBackup</Value>
+      <Value Profile="(Default)">DOMAIN\SysAdminAccount</Value>
     </Setting>
     <Setting Name="SMTPSERVER" Type="System.String" Scope="Application">
       <Value Profile="(Default)">SMTP_Server</Value>
     </Setting>
     <Setting Name="fromemail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DL-PCRDatabaseAlerts@domain</Value>
+      <Value Profile="(Default)">fromemail@domain</Value>
     </Setting>
     <Setting Name="alertemail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DL-PCRDatabaseAlerts@domain</Value>
+      <Value Profile="(Default)">tomemail@domain</Value>
     </Setting>
     <Setting Name="Instance" Type="System.String" Scope="User">
-      <Value Profile="(Default)">SQL_Instance</Value>
+      <Value Profile="(Default)">&lt;SQL_Instance&gt;</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;Run As Username&gt;</Value>
+    </Setting>
+    <Setting Name="Pwd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;Run As Password&gt;</Value>
+    </Setting>
+    <Setting Name="ROOT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LDAP://DCPWADS004</Value>
     </Setting>
   </Settings>
 </SettingsFile>

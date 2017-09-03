@@ -101,53 +101,6 @@ namespace ADCollector
             CCALERTEMAIL = ccemailaddress;
             BCCALERTEMAIL = bccemailaddress;
         }
-        public AllActions GetAllActions()
-        {
-            AllActions allactivities = new AllActions();
-            SQLHelper sqlhelper = new SQLHelper();
-            //   string connectionstring = @"Data Source=DCPWDBS447\SHIS;Initial Catalog=ADInventoryProd;User ID=shbascripts;Password=$cr1pt$upp0rt;Persist Security Info=True;Connection Timeout=3600;Connection Lifetime=0;Min Pool Size=0;Max Pool Size=10000;Pooling=true";
-        
-
-            string connectionstring = sqlhelper.GetUtilizationConnectionString();
-            Utilization db = new Utilization(connectionstring);
-            Table<ActionTable> actions = db.Actions;
-
-            var query = from action in actions orderby action.UpdateTimeStamp select action;
-            foreach (var activity in query)
-            {
-                Action thisaction = new Action(activity.Username, activity.DisplayName, activity.Telephone, activity.ManagerName, activity.EmailAddress,
-                    activity.Department, activity.Activity, activity.Tool, activity.UpdateTimeStamp);
-                allactivities.Add(thisaction);
-            }
-            return allactivities;
-        }
-        public AllActions SearchActivities(string searchstring)
-        {
-            AllActions allactivities = new AllActions();
-            SQLHelper sqlhelper = new SQLHelper();
-            string connectionstring = sqlhelper.GetUtilizationConnectionString();
-            Utilization db = new Utilization(connectionstring);
-            Table<ActionTable> actions = db.Actions;
-            searchstring = searchstring.ToLower();
-
-            var query = from action in actions
-                        where (action.Username.ToLower().Contains(searchstring) || action.Activity.ToLower().Contains(searchstring) ||
- action.DisplayName.ToLower().Contains(searchstring) || action.Department.ToLower().Contains(searchstring) ||
- action.Username.ToLower().Contains(searchstring) || action.Telephone.ToLower().Contains(searchstring) ||
- action.ManagerName.ToLower().Contains(searchstring) || action.Tool.ToLower().Contains(searchstring) ||
- action.UpdateTimeStamp.ToString().Contains(searchstring))
-                        orderby action.Tool
-                        select action;
-            //     var query = from action in actions where action.Username.ToLower().Contains(searchstring.ToLower()) orderby action.Tool select action;           
-            foreach (var activity in query)
-            {
-                Action thisaction = new Action(activity.Username, activity.DisplayName, activity.Telephone,
-                    activity.ManagerName, activity.EmailAddress, activity.Department, activity.Activity,
-                    activity.Tool, activity.UpdateTimeStamp);
-                allactivities.Add(thisaction);
-            }
-            return allactivities;
-        }
         private static void SendCompletedCallback(object sender, AsyncCompletedEventArgs e)
         {
             // Get the unique identifier for this asynchronous operation.
@@ -226,48 +179,6 @@ namespace ADCollector
                 Console.WriteLine("ERROR Sending EMAIL:\n\n" + exc.ToString());
             }
 
-        }
-        public void UpdateActivity()
-        {
-            SQLHelper sqlhelper = new SQLHelper();
-            string connectionstring = sqlhelper.GetUtilizationConnectionString();
-            Utilization db = new Utilization(connectionstring);
-            Table<ActionTable> actions = db.Actions;
-            ActiveDirectoryHelper adhelper = new ActiveDirectoryHelper();
-
-            DirectoryEntry entry = new DirectoryEntry();
-            ADUserDetail thisuser = adhelper.GetUserByLoginName(user);
-            string displayname = thisuser.DisplayName;
-            string telephone = thisuser.telePhone;
-            string managername = thisuser.ManagerName;
-            string emailaddress = thisuser.EmailAddress;
-            string department = thisuser.Department;
-
-            ActionTable thisaction = new ActionTable
-            {
-                Username = user,
-                DisplayName = displayname,
-                Telephone = telephone,
-                ManagerName = managername,
-                EmailAddress = emailaddress,
-                Department = department,
-                Activity = message,
-                Tool = app,
-                UpdateTimeStamp = DateTime.Now
-            };
-            try
-            {
-                db.Actions.InsertOnSubmit(thisaction);
-                db.SubmitChanges();
-            }
-            catch (SqlException exc)
-            {
-                Console.Write("SqlException: " + exc.ToString());
-            }
-            catch (Exception exc)
-            {
-                Console.Write("Exception: " + exc.ToString());
-            }
         }
     }
 }
