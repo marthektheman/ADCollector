@@ -25,7 +25,7 @@ namespace ADCollector
         }
         public bool CreateComputerObject(string computerName)
         {
-         //   string newcomputername = computerName + "@root.sutterhealth.org";
+         //   string newcomputername = computerName + "@domain";
             ComputerPrincipal ComputerPrincipal = new ComputerPrincipal(context);
             ComputerPrincipal.Name = computerName;
             
@@ -40,7 +40,7 @@ namespace ADCollector
         }
         public bool CreateUserObject(string userName, string password)
         {
-            string newusername = userName + "@root.sutterhealth.org";
+            string newusername = userName + "@domain";
             UserPrincipal UserPrincipal = new UserPrincipal(context, userName, password, true);
             UserPrincipal.UserPrincipalName = newusername;
             UserPrincipal.GivenName = userName;

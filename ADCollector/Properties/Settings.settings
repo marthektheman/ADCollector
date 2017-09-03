@@ -2,68 +2,74 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ADCollector.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ApplicationName" Type="System.String" Scope="User">
+    <Setting Name="ApplicationName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADCollector.exe</Value>
     </Setting>
-    <Setting Name="ROOT" Type="System.String" Scope="User">
+    <Setting Name="ROOT" Type="System.String" Scope="Application">
       <Value Profile="(Default)">LDAP://DCPWADS004</Value>
     </Setting>
-    <Setting Name="developeraccount" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ad-johnstw1</Value>
-    </Setting>
-    <Setting Name="version" Type="System.String" Scope="User">
+    <Setting Name="version" Type="System.String" Scope="Application">
       <Value Profile="(Default)">2.0.0.2</Value>
     </Setting>
-    <Setting Name="Instance" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DCPWDBS447\SHIS</Value>
-    </Setting>
-    <Setting Name="Database" Type="System.String" Scope="User">
+    <Setting Name="Database" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryProd</Value>
     </Setting>
-    <Setting Name="Username" Type="System.String" Scope="User">
+    <Setting Name="Username" Type="System.String" Scope="Application">
       <Value Profile="(Default)">shbascripts</Value>
     </Setting>
-    <Setting Name="Pwd" Type="System.String" Scope="User">
+    <Setting Name="Pwd" Type="System.String" Scope="Application">
       <Value Profile="(Default)">$cr1pt$upp0rt</Value>
     </Setting>
-    <Setting Name="TestDatabase" Type="System.String" Scope="User">
+    <Setting Name="TestDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryTest</Value>
     </Setting>
-    <Setting Name="AllDatabase" Type="System.String" Scope="User">
+    <Setting Name="AllDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryAll</Value>
     </Setting>
-    <Setting Name="SQLDatabase" Type="System.String" Scope="User">
+    <Setting Name="SQLDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventorySQL</Value>
     </Setting>
-    <Setting Name="WorkstationDatabase" Type="System.String" Scope="User">
+    <Setting Name="WorkstationDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryWin7</Value>
     </Setting>
-    <Setting Name="toemail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DL-PCRDatabaseAlerts@sutterhealth.org</Value>
-    </Setting>
-    <Setting Name="ccemail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">johnstw1@sutterhealth.org</Value>
-    </Setting>
-    <Setting Name="UtilizationDatabase" Type="System.String" Scope="User">
+    <Setting Name="UtilizationDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Utilization</Value>
     </Setting>
-    <Setting Name="UtilizationUsername" Type="System.String" Scope="User">
+    <Setting Name="UtilizationUsername" Type="System.String" Scope="Application">
       <Value Profile="(Default)">shbascripts</Value>
     </Setting>
-    <Setting Name="UtilizationPassword" Type="System.String" Scope="User">
+    <Setting Name="UtilizationPassword" Type="System.String" Scope="Application">
       <Value Profile="(Default)">$cr1pt$upp0rt</Value>
     </Setting>
-    <Setting Name="DatabaseInstance" Type="System.String" Scope="User">
+    <Setting Name="DatabaseInstance" Type="System.String" Scope="Application">
       <Value Profile="(Default)">DCPWDBS447\SHIS</Value>
     </Setting>
-    <Setting Name="UtilizationDatabaseInstance" Type="System.String" Scope="User">
+    <Setting Name="UtilizationDatabaseInstance" Type="System.String" Scope="Application">
       <Value Profile="(Default)">DCPWDBS447\SHIS</Value>
     </Setting>
-    <Setting Name="DatabaseTest" Type="System.String" Scope="User">
+    <Setting Name="DatabaseTest" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ADInventoryTest</Value>
     </Setting>
-    <Setting Name="SysAdminAccount" Type="System.String" Scope="User">
-      <Value Profile="(Default)">SUTTER-CHS\\NetBackup</Value>
+    <Setting Name="toemail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DatabaseAlerts@domain.com</Value>
+    </Setting>
+    <Setting Name="ccemail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ccemail@domain.org</Value>
+    </Setting>
+    <Setting Name="SysAdminAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DOMAIN\\NetBackup</Value>
+    </Setting>
+    <Setting Name="SMTPSERVER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SMTP_Server</Value>
+    </Setting>
+    <Setting Name="fromemail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DL-PCRDatabaseAlerts@domain</Value>
+    </Setting>
+    <Setting Name="alertemail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DL-PCRDatabaseAlerts@domain</Value>
+    </Setting>
+    <Setting Name="Instance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQL_Instance</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -27,9 +27,9 @@ namespace ADCollector
         private string subject;
         private string user;
         private string app;
-        public static string SMTPSERVER = "mail.sutterhealth.org";
-        public string FROMEMAIL = "DL-PCRDatabaseAlerts@sutterhealth.org";
-        public string ALERTEMAIL = "DL-PCRDatabaseAlerts@sutterhealth.org";
+        public static string SMTPSERVER = Properties.Settings.Default.SMTPSERVER;
+        public string FROMEMAIL = Properties.Settings.Default.fromemail;
+        public string ALERTEMAIL = Properties.Settings.Default.toemail;
         private string CCALERTEMAIL;
         private string BCCALERTEMAIL;
 
@@ -67,7 +67,7 @@ namespace ADCollector
             subject = string.Empty;
             user = username;
             app = applicationname;
-            ALERTEMAIL = "DL-PCRDatabaseAlerts@sutterhealth.org";
+            ALERTEMAIL = Properties.Settings.Default.alertemail;
             CCALERTEMAIL = string.Empty;
             BCCALERTEMAIL = string.Empty;
         }
@@ -182,7 +182,6 @@ namespace ADCollector
             {
                 msg.Bcc.Add(BCCALERTEMAIL);
             }
-            //msg.To.Add("johnstw1@sutterhealth.org");           
             //msg.From = new MailAddress(Properties.Settings.Default.AlertEmail);
             msg.From = new MailAddress(FROMEMAIL, "Application Activity Alerts");
             if (subject == string.Empty)

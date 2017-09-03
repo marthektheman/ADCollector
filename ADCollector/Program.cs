@@ -1365,7 +1365,7 @@ ORDER BY DP1.name;";
                     }
                     catch (Exception exc)
                     {
-                        systeminfo.Domain = "root.sutterhealth.org";
+                        systeminfo.Domain = "domain";
                         Console.WriteLine(systeminfo.HostName + "Domain Exception:\n\n" + exc.ToString());
                     }
                     try
@@ -1444,7 +1444,7 @@ ORDER BY DP1.name;";
                     }
                     catch (Exception exc)
                     {
-                        systeminfo.Domain = "root.sutterhealth.org";
+                        systeminfo.Domain = "domain";
                         Console.WriteLine(samaccountname.TrimEnd('$') + "Domain Exception:\n\n" + exc.ToString());
                     }
                     try
@@ -1526,7 +1526,7 @@ ORDER BY DP1.name;";
                     }
                     catch (Exception exc)
                     {
-                        systeminfo.Domain = "root.sutterhealth.org";
+                        systeminfo.Domain = "domain";
                         Console.WriteLine(samaccountname.TrimEnd('$') + "Domain Exception:\n\n" + exc.ToString());
                     }
                     try
