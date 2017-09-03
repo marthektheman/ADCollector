@@ -8,9 +8,11 @@ Example runs:
 #All Servers.
 #ldapquery = "(&(ObjectCategory=computer)(operatingSystem=*Server*))"; 
 ADCollector.exe "OU=Coastal Region,DC=MYDOMAIN,DC=ORG" "Servers"  
+
 #All desktops.    
 #ldapquery = "(|(&(ObjectCategory=computer)(operatingSystem=Windows 7*))(operatingSystem=Windows XP*))"; 
 ADCollector.exe "OU=Coastal Region,DC=MYDOMAIN,DC=ORG" "Desktops"  
+
 #All computer objects
 #ldapquery = "(ObjectCategory=computer)";
 ADCollector.exe "OU=Coastal Region,DC=MYDOMAIN,DC=ORG" "All"
