@@ -15,6 +15,7 @@ Console app for doing a CIM and SQL inventory of AD computer objects.   All da
 For data presentation a WPF/XAML GUI interface along with ASP.net AngularJS code exists as well.  
 
 I will probably add this as a different project here shortly.
+
 Example runs:
 
 
